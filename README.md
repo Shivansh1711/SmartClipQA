@@ -7,7 +7,7 @@ An intelligent clipboard automation tool that **monitors your clipboard**, detec
 ## 📌 Features
 
 - 🔍 **Clipboard Watcher** — Detects new copied text automatically.
-- 🧠 **Gemini Integration** — Uses Google's Gemini (Gemini 1.5 Flash) to answer.
+- 🧠 **Gemini Integration** — Uses Google's Gemini (Gemini 2.0 Flash) to answer.
 - 🖼️ **System Tray App** — Runs in the background, easy to exit.
 - 🪟 **Popup Dialogs** — Lightweight Tkinter UI shows quick answers.
 - 🔔 **Desktop Notifications** — Pops a notification with the Gemini response.
@@ -108,6 +108,7 @@ Which gas is essential for photosynthesis?
 ```
 mcq_automation.py    # Main script
 README.md            # This file
+test.py              # testing lib
 ```
 
 ---
