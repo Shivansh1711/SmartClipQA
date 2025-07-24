@@ -11,6 +11,8 @@ An intelligent clipboard automation tool that **monitors your clipboard**, detec
 - 🖼️ **System Tray App** — Runs in the background, easy to exit.
 - 🪟 **Popup Dialogs** — Lightweight Tkinter UI shows quick answers.
 - 🔔 **Desktop Notifications** — Pops a notification with the Gemini response.
+- ⌨️ **Shortcut (ESC)** – Instantly dismiss answer popup
+
 
 ---
 
@@ -112,6 +114,8 @@ test.py              # testing lib
 ```
 
 ---
+
+
 
 ## ❌ Troubleshooting
 

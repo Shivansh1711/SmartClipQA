@@ -21,19 +21,52 @@ def show_popup(title, msg):
         top = tk.Toplevel()
         top.title(title)
         top.attributes("-topmost", True)  # Always on top
-        top.geometry("400x150+600+300")   # Custom size & position
+        top.geometry("420x160+600+300")   # Slightly wider
         top.resizable(False, False)
+        top.configure(bg="#1e1e2f")
 
-        label = tk.Label(top, text=msg, wraplength=380, justify="left", padx=10, pady=10)
-        label.pack(pady=(20, 10))
+        top.focus_force()  # 🔥 Focus popup so Esc works immediately
 
-        btn = tk.Button(top, text="Close", command=top.destroy)
+        # Frame for styling
+        frame = tk.Frame(top, bg="#1e1e2f")
+        frame.pack(fill="both", expand=True, padx=10, pady=10)
+
+        label = tk.Label(
+            frame,
+            text=msg,
+            wraplength=380,
+            justify="left",
+            padx=10,
+            pady=10,
+            bg="#1e1e2f",
+            fg="#ffffff",
+            font=("Segoe UI", 11)
+        )
+        label.pack(pady=(10, 10))
+
+        btn = tk.Button(
+            frame,
+            text="✖ Close",
+            command=top.destroy,
+            bg="#3a3a4f",
+            fg="#ffffff",
+            activebackground="#5a5a7f",
+            activeforeground="#ffffff",
+            relief="flat",
+            padx=12,
+            pady=6,
+            font=("Segoe UI", 10)
+        )
         btn.pack()
 
-        # Auto close after 15 seconds (optional)
-        top.after(3000, top.destroy)
+        # 🔑 Esc key shortcut to close
+        top.bind("<Escape>", lambda event: top.destroy())
+
+        # ⏱️ Auto close after 15 seconds
+        top.after(15000, top.destroy)
 
     root.after(0, _popup)
+
 
 
 # 🧠 Gemini API request
